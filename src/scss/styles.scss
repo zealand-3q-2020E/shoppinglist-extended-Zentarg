@@ -46,3 +46,24 @@ li {
     text-shadow: 2px 2px 1px #3b6a5e;
     border-top: 1px solid #7ee0c9;
     border-bottom: 1px solid #3b6a5e;}
+
+#newItemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#newItemInput {
+    border-radius: 3px;
+    border: 1px solid #747474;
+}
+
+#newItemAdd {
+    background: #747474;
+    width: 120px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #ffffff;
+}
