@@ -6,6 +6,12 @@ document.getElementById("newItemAdd").addEventListener('click', () => {
     addNewItemToShoppingList(name);
 });
 
+let children = document.getElementById("list").children;
+
+for (let index = 0; index < children.length; index++) {
+    const element = children[index];
+    element.addEventListener("click", () => {HiddenOnClick(<HTMLElement> element)});
+}
 
 function addNewItemToShoppingList(itemName : string) {
     let list : HTMLUListElement = <HTMLUListElement> document.getElementById("list");
@@ -18,7 +24,11 @@ function addNewItemToShoppingList(itemName : string) {
             break;
         }
     }
-
     newItem.innerText = itemName;
+    newItem.addEventListener("click", () => {HiddenOnClick(newItem)});
     list.appendChild(newItem);
+}
+
+function HiddenOnClick(e : HTMLElement) {
+    e.setAttribute("hidden", "true");
 }
